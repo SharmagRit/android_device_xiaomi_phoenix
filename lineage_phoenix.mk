@@ -6,21 +6,21 @@
 
 $(call inherit-product, device/xiaomi/phoenix/device.mk)
 
-# Inherit some common Aosp stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit some common riceDroid stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_phoenix
+PRODUCT_NAME := lineage_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X2
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Aosp Stuff with GApps
+# riceDroic stuff with GApps
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_BLUR := true
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 WITH_GAPPS := true
 
@@ -32,6 +32,4 @@ BUILD_FINGERPRINT := google/raven/raven:12/SP2A.220405.004/8233519:user/release-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Maintainer Stuff
-ARCANA_MAINTAINER := SharmaG
-ARCANA_OFFICIAL := true
-
+RICE_MAINTAINER := SharmaG
