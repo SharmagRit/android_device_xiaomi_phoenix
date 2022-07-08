@@ -1,4 +1,3 @@
-
 #
 # Copyright (C) 2020 The LineageOS Project
 #
@@ -17,12 +16,12 @@ PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X2
 PRODUCT_MANUFACTURER := Xiaomi
 
-# riceDroic stuff with GApps
+# riceDroid stuff with GApps
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_ENABLE_BLUR := true
 WITH_GMS := true
 
 # Fingerprint
@@ -35,3 +34,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Maintainer Stuff
 RICE_MAINTAINER := SharmaG
+RICE_OFFICIAL := true
