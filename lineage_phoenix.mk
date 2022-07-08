@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2020 The LineageOS Project
 #
@@ -22,7 +23,7 @@ TARGET_GAPPS_ARCH := arm64
 TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
-WITH_GAPPS := true
+WITH_GMS := true
 
 # Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
