@@ -551,6 +551,9 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay \
     libwpa_client \
+    android.hardware.wifi.supplicant \
+    android.hardware.wifi.hostapd \
+    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 
