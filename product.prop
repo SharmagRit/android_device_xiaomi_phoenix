@@ -2,11 +2,48 @@
 ro.config.media_vol_default=10
 
 # Bluetooth
+bluetooth.hardware.power.idle_cur_ma=36
+bluetooth.hardware.power.operating_voltage_mv=3700
+bluetooth.hardware.power.rx_cur_ma=20
+bluetooth.hardware.power.tx_cur_ma=3
 persist.bluetooth.bqr.event_mask=14
 persist.bluetooth.bqr.min_interval_ms=500
 persist.vendor.bt.a2dp.mac_whitelist=false
 persist.vendor.btsatck.absvolfeature=true
 persist.vendor.btstack.connect.peer_earbud=true
+
+# Set the Bluetooth Class of Device
+# Service Field: 0x5A -> 90
+#    Bit 17: Networking
+#    Bit 19: Capturing
+#    Bit 20: Object Transfer
+#    Bit 22: Telephony
+# MAJOR_CLASS: 0x02 -> 2 (Phone)
+# MINOR_CLASS: 0x0C -> 12 (Smart Phone)
+bluetooth.device.class_of_device=90,2,12
+
+# Set supported Bluetooth profiles to enabled
+bluetooth.profile.asha.central.enabled?=true
+bluetooth.profile.a2dp.source.enabled?=true
+bluetooth.profile.avrcp.target.enabled?=true
+bluetooth.profile.bap.broadcast.assist.enabled?=true
+bluetooth.profile.bap.unicast.client.enabled?=true
+bluetooth.profile.bas.client.enabled?=true
+bluetooth.profile.csip.set_coordinator.enabled?=true
+bluetooth.profile.gatt.enabled?=true
+bluetooth.profile.hap.client.enabled?=true
+bluetooth.profile.hfp.ag.enabled?=true
+bluetooth.profile.hid.device.enabled?=true
+bluetooth.profile.hid.host.enabled?=true
+bluetooth.profile.map.server.enabled?=true
+bluetooth.profile.mcp.server.enabled?=true
+bluetooth.profile.opp.enabled?=true
+bluetooth.profile.pan.nap.enabled?=true
+bluetooth.profile.pan.panu.enabled?=true
+bluetooth.profile.pbap.server.enabled?=true
+bluetooth.profile.sap.server.enabled?=true
+bluetooth.profile.ccp.server.enabled?=true
+bluetooth.profile.vcp.controller.enabled?=true
 
 # Blur
 ro.sf.blurs_are_expensive=1
@@ -45,7 +82,7 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
-#GBoard
+# GBoard
 ro.com.google.ime.kb_pad_port_b=1
 
 # Incremental FS
@@ -73,45 +110,6 @@ ro.netflix.bsp_rev=Q6150-17263-1
 # Perfetto
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
-# Bluetooth
-bluetooth.hardware.power.idle_cur_ma=36
-bluetooth.hardware.power.operating_voltage_mv=3700
-bluetooth.hardware.power.rx_cur_ma=20
-bluetooth.hardware.power.tx_cur_ma=3
-
-# Set the Bluetooth Class of Device
-# Service Field: 0x5A -> 90
-#    Bit 17: Networking
-#    Bit 19: Capturing
-#    Bit 20: Object Transfer
-#    Bit 22: Telephony
-# MAJOR_CLASS: 0x02 -> 2 (Phone)
-# MINOR_CLASS: 0x0C -> 12 (Smart Phone)
-bluetooth.device.class_of_device=90,2,12
-
-# Set supported Bluetooth profiles to enabled
-bluetooth.profile.asha.central.enabled?=true
-bluetooth.profile.a2dp.source.enabled?=true
-bluetooth.profile.avrcp.target.enabled?=true
-bluetooth.profile.bap.broadcast.assist.enabled?=true
-bluetooth.profile.bap.unicast.client.enabled?=true
-bluetooth.profile.bas.client.enabled?=true
-bluetooth.profile.csip.set_coordinator.enabled?=true
-bluetooth.profile.gatt.enabled?=true
-bluetooth.profile.hap.client.enabled?=true
-bluetooth.profile.hfp.ag.enabled?=true
-bluetooth.profile.hid.device.enabled?=true
-bluetooth.profile.hid.host.enabled?=true
-bluetooth.profile.map.server.enabled?=true
-bluetooth.profile.mcp.server.enabled?=true
-bluetooth.profile.opp.enabled?=true
-bluetooth.profile.pan.nap.enabled?=true
-bluetooth.profile.pan.panu.enabled?=true
-bluetooth.profile.pbap.server.enabled?=true
-bluetooth.profile.sap.server.enabled?=true
-bluetooth.profile.ccp.server.enabled?=true
-bluetooth.profile.vcp.controller.enabled?=true
-
 # Radio
 DEVICE_PROVISIONED=1
 persist.sys.fflag.override.settings_network_and_internet_v2=true
@@ -122,11 +120,19 @@ persist.vendor.radio.force_on_dc=true
 ril.subscription.types=RUIM
 persist.sys.fflag.override.settings_provider_model=false
 
+# Set stock DPI
+ro.sf.lcd_density=440
+
 # Shutdown
 ro.build.shutdown_timeout=2
 
 # Time
 persist.vendor.delta_time.enable=true
+
+# Usb debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
 
 # Wireless display
 debug.sf.latch_unsignaled=0
@@ -135,6 +141,3 @@ persist.sys.wfd.virtual=0
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
-
-# Set stock DPI
-ro.sf.lcd_density=440
