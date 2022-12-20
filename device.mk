@@ -47,7 +47,6 @@ PRODUCT_PACKAGES += \
     audio.primary.sm6150:32 \
     audio.r_submix.default \
     audio.usb.default \
-    GoogleCameraGo \
     liba2dpoffload \
     libaudio-resampler \
     libbatterylistener \
